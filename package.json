@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-reflect-metadata",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "ESLint plugin to ensure reflect-metadata is imported before any other imports",
   "type": "module",
   "main": "./dist/index.js",
@@ -69,5 +69,13 @@
     "release-it": "^19.2.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tupe12334/eslint-plugin-reflect-metadata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tupe12334/eslint-plugin-reflect-metadata/issues"
+  },
+  "homepage": "https://github.com/tupe12334/eslint-plugin-reflect-metadata#readme"
 }
