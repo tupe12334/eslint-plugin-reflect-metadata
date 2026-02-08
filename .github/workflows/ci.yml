@@ -76,11 +76,12 @@ jobs:
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           echo "Current version: $CURRENT_VERSION"
 
-          git checkout HEAD~1 package.json 2>/dev/null || echo "No previous commit"
-          PREV_VERSION=$(node -p "require('./package.json').version" 2>/dev/null || echo "none")
+          if git show HEAD~1:package.json > /tmp/prev-package.json 2>/dev/null; then
+            PREV_VERSION=$(node -p "require('/tmp/prev-package.json').version" 2>/dev/null || echo "none")
+          else
+            PREV_VERSION="none"
+          fi
           echo "Previous version: $PREV_VERSION"
-
-          git checkout HEAD package.json
 
           if [ "$CURRENT_VERSION" != "$PREV_VERSION" ]; then
             echo "Version changed from $PREV_VERSION to $CURRENT_VERSION"
