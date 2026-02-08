@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-reflect-metadata",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ESLint plugin to ensure reflect-metadata is imported before any other imports",
   "type": "module",
   "main": "./dist/index.js",

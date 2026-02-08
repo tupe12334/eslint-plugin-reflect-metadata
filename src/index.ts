@@ -4,7 +4,7 @@ import reflectMetadataFirst from './rules/reflect-metadata-first.js'
 const plugin: ESLint.Plugin = {
   meta: {
     name: 'eslint-plugin-reflect-metadata',
-    version: '0.1.0',
+    version: '0.1.1',
   },
   rules: {
     'reflect-metadata-first': reflectMetadataFirst,
